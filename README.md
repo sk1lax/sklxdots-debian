@@ -19,7 +19,7 @@ deb-src https://deb.debian.org/debian/ bookworm-backports main contrib non-free 
 ```
 - Installing packages 
 ```
-sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman git bc module-assistant build-essential dkms
+sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman git bc module-assistant build-essential dkms nitrogen libqt5svg5 libqt5svg5-dev libqt5x11extras5 libqt5x11extras5-dev qt5-style-kvantum 
 ```
 
 - Setting up Flatpak
