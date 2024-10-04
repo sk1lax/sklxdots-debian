@@ -97,3 +97,6 @@ sudo nano /etc/default/grub
 # ---------------------------------GRUB OPTIONS---------------------------------
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=off"
 ```
+```
+sudo update-grub
+```
