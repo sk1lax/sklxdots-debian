@@ -19,7 +19,7 @@ deb-src https://deb.debian.org/debian/ bookworm-backports main contrib non-free 
 ```
 - Installing packages 
 ```
-sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman
+sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman git bc module-assistant build-essential dkms
 ```
 
 - Setting up Flatpak
@@ -67,4 +67,33 @@ sudo apt install gtk2-engines-murrine gnome-themes-extra
 sudo apt autoremove uim-mozc mozc-utils-gui mozc-server mozc-data xiterm+thai mlterm kasumi anthy-common transmission-gtk yelp gnome-calendar gnome-2048 gnome-clocks simple-scan aisleriot evolution five-or-more gnome-font-viewer yelp gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-nibbles malcontent seahorse gnome-robots rhythmbox iagno shotwell gnome-sudoku swell-foop software-properties-gtk gnome-todo transmission-gtk gnome-weather firefox-esr gnome-chess gnome-games gnome-tetravex gnome-quadrapassel gnome-tali
 ```
 
-
+### Realtek Fix
+- Installing driver
+```
+git clone https://github.com/tomaspinho/rtl8821ce.git
+```
+```
+cd rtl8821ce
+```
+```
+sudo m-a prepare
+```
+```
+sudo ./dkms-install.sh
+```
+- Blacklisting modules
+```
+sudo nano /etc/modprobe.d/blacklist.conf
+```
+```
+blacklist rtw88_8821ce
+blacklist nouveau
+```
+- Turning Off ASPM
+```
+sudo nano /etc/default/grub
+```
+```
+# ---------------------------------GRUB OPTIONS---------------------------------
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=off"
+```
