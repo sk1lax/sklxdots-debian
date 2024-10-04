@@ -1,6 +1,6 @@
 # Debian setup  
 ### Software
-- Sources
+- Essentials
 ```
 #deb cdrom:[Debian GNU/Linux 12.7.0 _Bookworm_ - Official amd64 DVD Binary-1 with firmware 20240831-10:40]/ bookworm contrib main non-free-firmware
 
@@ -17,13 +17,42 @@ deb-src https://deb.debian.org/debian/ bookworm-updates main contrib non-free no
 deb https://deb.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
 deb-src https://deb.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
 ```
-- Essentials 
+- Installing packages 
 ```
-sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder 
+sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman
 ```
 
+- Setting up Flatpak
+```
+sudo apt install flatpak
+```
+```
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
 
-
+- Groups
+```
+usermod -a -G video,audio,sudo USERNAME
+```
+### Steam & Drivers setup 
+- Nvidia Drivers
+```
+sudo apt install nvidia-driver 
+```
+- 32bit Packages 
+```
+sudo dpkg --add-architecture i386
+```
+```
+sudo apt update && sudo apt full-upgrade
+```
+```
+sudo apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 nvidia-driver-libs:i386
+```
+- Steam
+```
+sudo apt install steam-installer
+```
 ### BSPWM setup
 - Software
 ```
