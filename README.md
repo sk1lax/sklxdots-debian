@@ -56,7 +56,7 @@ sudo apt install steam-installer
 ### BSPWM setup
 - Software
 ```
-sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo
+sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct 
 ```
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra
