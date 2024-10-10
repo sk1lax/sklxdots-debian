@@ -117,3 +117,38 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=off"
 ```
 sudo update-grub
 ```
+
+### Setting up theme fix
+```
+nano ~/.gtkrc-2.0
+```
+```
+gtk-theme-name="Material-Black-Blueberry-BE"
+gtk-icon-theme-name="Papirus"
+gtk-font-name="JetBrainsMono Nerd Font Mono Semi-Bold 10"
+gtk-cursor-theme-name="Bibata-Modern-Classic"
+```
+
+```
+nano ~/.config/gtk-3.0/settings.ini
+
+```
+```
+gtk-theme-name=Material-Black-Blueberry-BE
+gtk-icon-theme-name=Papirus
+gtk-font-name=JetBrainsMono Nerd Font Mono Semi-Bold 10
+gtk-cursor-theme-name=Bibata-Modern-Classic
+```
+
+```
+nano ~/.Xresources
+```
+```
+Xcursor.theme: Bibata-Modern-Classic
+```
+```
+nano ~/.xprofile
+```
+```
+xrdb ~/.Xresources
+```
