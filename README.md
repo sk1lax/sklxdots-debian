@@ -19,7 +19,7 @@ deb-src https://deb.debian.org/debian/ bookworm-backports main contrib non-free 
 ```
 - Installing packages 
 ```
-sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman git bc module-assistant build-essential dkms nitrogen libqt5svg5 libqt5svg5-dev libqt5x11extras5 libqt5x11extras5-dev qt5-style-kvantum 
+sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman git bc module-assistant build-essential dkms nitrogen libqt5svg5 libqt5svg5-dev libqt5x11extras5 libqt5x11extras5-dev
 ```
 
 - Setting up Flatpak
@@ -56,7 +56,7 @@ sudo apt install steam-installer
 ### BSPWM setup
 - Software
 ```
-sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct 
+sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes
 ```
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra
