@@ -197,4 +197,15 @@ flatpak -u override --env=XCURSOR_THEME=Bibata-Modern-Classic
 flatpak -u override --filesystem=/home/$USER/.icons/:ro 
 flatpak -u override --filesystem=xdg-config/gtk-3.0:ro
 ```
-
+### Aliaces reminder
+```
+touch .bash_aliaces
+```
+```
+nano .bashrc
+```
+```
+if [ -f ~/.bash_aliases ]; then
+   . ~/.bash_aliases
+fi
+```
