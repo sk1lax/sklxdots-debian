@@ -61,6 +61,23 @@ sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappear
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra
 ```
+- Win + Space layout setup
+```
+sudo localectl --no-convert set-x11-keymap us,ru "" "" grp:win_space_toggle
+```
+- Disable mouse acceleration
+```
+sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
+```
+```
+ Section "InputClass"
+  Identifier "libinput pointer catchall"
+  MatchIsPointer "on"
+  MatchDevicePath "/dev/input/event*"
+  Driver "libinput"
+  Option "AccelProfile" "flat"
+ EndSection
+```
 ### GNOME setup
 - Uninstalling trash
 ```
