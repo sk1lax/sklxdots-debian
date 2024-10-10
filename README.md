@@ -56,7 +56,7 @@ sudo apt install steam-installer
 ### BSPWM setup
 - Software
 ```
-sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes
+sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics
 ```
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra
@@ -77,6 +77,39 @@ sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
   Driver "libinput"
   Option "AccelProfile" "flat"
  EndSection
+```
+- Touchpad Gestures
+```
+sudo nano /etc/X11/xorg.conf.d/synaptics.conf
+```
+
+```
+Section "InputClass"
+        Identifier      "Touchpad"                      # requir>
+        MatchIsTouchpad "yes"                           # requir>
+        Driver          "synaptics"                     # requir>
+        Option          "MinSpeed"              "1.1"
+
+        Option          "MaxSpeed"              "1.1"
+        Option          "AccelFactor"           "0.0"
+        Option          "TapButton1"            "1"
+        Option          "TapButton2"            "3"     # multit>
+        Option          "TapButton3"            "2"     # multit>
+        Option "VertEdgeScroll" "on"
+        Option "VertTwoFingerScroll" "on"
+        Option "HorizEdgeScroll" "on"
+        Option "HorizTwoFingerScroll" "on"
+        Option "CircularScrolling" "on"
+        Option          "CoastingSpeed"         "8"
+        Option          "CornerCoasting"        "1"
+        Option          "CircularScrolling"     "1"
+        Option          "CircScrollTrigger"     "2"
+        Option          "EdgeMotionUseAlways"   "1"
+        Option          "LBCornerButton"        "8"     # browse>
+        Option          "RBCornerButton"        "9"     # browse>
+        Option          "EmulateTwoFingerMinZ"  "35"
+        Option          "EmulateTwoFingerMinW"  "8"
+
 ```
 ### GNOME setup
 - Uninstalling trash
@@ -123,6 +156,7 @@ sudo update-grub
 nano ~/.gtkrc-2.0
 ```
 ```
+#
 gtk-theme-name="Material-Black-Blueberry-BE"
 gtk-icon-theme-name="Papirus"
 gtk-font-name="JetBrainsMono Nerd Font Mono Semi-Bold 10"
@@ -131,9 +165,9 @@ gtk-cursor-theme-name="Bibata-Modern-Classic"
 
 ```
 nano ~/.config/gtk-3.0/settings.ini
-
 ```
 ```
+#
 gtk-theme-name=Material-Black-Blueberry-BE
 gtk-icon-theme-name=Papirus
 gtk-font-name=JetBrainsMono Nerd Font Mono Semi-Bold 10
@@ -144,11 +178,23 @@ gtk-cursor-theme-name=Bibata-Modern-Classic
 nano ~/.Xresources
 ```
 ```
+#
 Xcursor.theme: Bibata-Modern-Classic
 ```
 ```
 nano ~/.xprofile
 ```
 ```
+#
 xrdb ~/.Xresources
 ```
+
+- Flatpak cursor theme
+```
+nano /home/skilax/.local/share/flatpak/overrides/global
+flatpak -u override --env=XCURSOR_PATH=~/.icons
+flatpak -u override --env=XCURSOR_THEME=Bibata-Modern-Classic
+flatpak -u override --filesystem=/home/$USER/.icons/:ro 
+flatpak -u override --filesystem=xdg-config/gtk-3.0:ro
+```
+
