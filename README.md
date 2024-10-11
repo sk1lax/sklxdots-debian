@@ -56,7 +56,7 @@ sudo apt install steam-installer
 ### BSPWM setup
 - Software
 ```
-sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics
+sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics xdg-desktop-portal-gtk xdg-desktop-portal imagemagick
 ```
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra
