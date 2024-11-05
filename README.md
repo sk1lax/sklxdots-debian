@@ -84,17 +84,19 @@ sudo nano /etc/X11/xorg.conf.d/synaptics.conf
 ```
 
 ```
+  GNU nano 7.2                                                     synaptics.conf
 Section "InputClass"
-        Identifier      "Touchpad"                      # requir>
-        MatchIsTouchpad "yes"                           # requir>
-        Driver          "synaptics"                     # requir>
-        Option          "MinSpeed"              "1.1"
-
-        Option          "MaxSpeed"              "1.1"
+        Identifier      "Touchpad"                      # required
+        MatchIsTouchpad "yes"                           # required
+        Driver          "synaptics"                     # required
+        Option          "MinSpeed"              "0"
+        Option          "MaxSpeed"              "0"
+        Option          "MinSpeed"              "0.9"
+        Option          "MaxSpeed"              "0.9"
         Option          "AccelFactor"           "0.0"
         Option          "TapButton1"            "1"
-        Option          "TapButton2"            "3"     # multit>
-        Option          "TapButton3"            "2"     # multit>
+        Option          "TapButton2"            "3"     # multitouch
+        Option          "TapButton3"            "2"     # multitouch
         Option "VertEdgeScroll" "on"
         Option "VertTwoFingerScroll" "on"
         Option "HorizEdgeScroll" "on"
@@ -105,10 +107,12 @@ Section "InputClass"
         Option          "CircularScrolling"     "1"
         Option          "CircScrollTrigger"     "2"
         Option          "EdgeMotionUseAlways"   "1"
-        Option          "LBCornerButton"        "8"     # browse>
-        Option          "RBCornerButton"        "9"     # browse>
+        Option          "LBCornerButton"        "8"     # browser "back" btn
+        Option          "RBCornerButton"        "9"     # browser "forward" btn
         Option          "EmulateTwoFingerMinZ"  "35"
         Option          "EmulateTwoFingerMinW"  "8"
+        Option "Ignore" "on" # disable touchpad
+EndSection
 
 ```
 ### GNOME setup
