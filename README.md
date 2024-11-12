@@ -2,24 +2,19 @@
 ### Software
 - Essentials
 ```
-#deb cdrom:[Debian GNU/Linux 12.7.0 _Bookworm_ - Official amd64 DVD Binary-1 with firmware 20240831-10:40]/ bookworm contrib main non-free-firmware
+deb http://deb.debian.org/debian/ testing main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian/ testing main contrib non-free non-free-firmware
 
-deb http://deb.debian.org/debian buster-backports main
-deb https://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
-deb-src https://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
-
-deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-deb-src http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-
-deb https://deb.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware
-deb-src https://deb.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware
-
-deb https://deb.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
-deb-src https://deb.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb http://security.debian.org/debian-security testing-security main non-free-firmware
+deb-src http://security.debian.org/debian-security testing-security main non-free-firmware
 ```
-- Installing packages 
+- Installing packages
 ```
-sudo apt install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp blueman git bc module-assistant build-essential dkms nitrogen libqt5svg5 libqt5svg5-dev libqt5x11extras5 libqt5x11extras5-dev
+sudo apt install xorg pipewire pipewire-pulse pipewire-alsa alsa-utils xorg network-manager pipewire-jack
+```
+```
+sudo apt nala install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp git bc module-assistant build-essential dkms geany
+# libqt5x11extras5 libqt5x11extras5-dev libqt5svg5 libqt5svg5-dev blueman nitrogen 
 ```
 
 - Setting up Flatpak
@@ -56,14 +51,25 @@ sudo apt install steam-installer
 ### BSPWM setup
 - Software
 ```
-sudo apt install bspwm polybar sxhkd alacritty brightnessctl dunst rofi lxappearance picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics xdg-desktop-portal-gtk xdg-desktop-portal imagemagick
+sudo apt install bspwm polybar sxhkd alacritty dunst rofi nwg-look picom ranger flameshot nemo qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics xdg-desktop-portal-gtk xdg-desktop-portal imagemagick brightnessctl brightnessctl-dev lightdm pamixer
 ```
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra
 ```
-- Win + Space layout setup
+- Layout setup
 ```
-sudo localectl --no-convert set-x11-keymap us,ru "" "" grp:win_space_toggle
+#sudo localectl --no-convert set-x11-keymap us,ru "" "" grp:caps_toggle
+```
+```sudo nano /etc/vconsole.conf```
+```
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+XKBLAYOUT="us,ru"
+XKBOPTIONS="grp:caps_toggle,grp_led:scroll"
+BACKSPACE="guess"
+XKBMODEL="pc105"
+XKBVARIANT=","
 ```
 - Disable mouse acceleration
 ```
@@ -157,28 +163,6 @@ sudo update-grub
 
 ### Setting up theme fix
 ```
-nano ~/.gtkrc-2.0
-```
-```
-#
-gtk-theme-name="Material-Black-Blueberry-BE"
-gtk-icon-theme-name="Papirus"
-gtk-font-name="JetBrainsMono Nerd Font Mono Semi-Bold 10"
-gtk-cursor-theme-name="Bibata-Modern-Classic"
-```
-
-```
-nano ~/.config/gtk-3.0/settings.ini
-```
-```
-#
-gtk-theme-name=Material-Black-Blueberry-BE
-gtk-icon-theme-name=Papirus
-gtk-font-name=JetBrainsMono Nerd Font Mono Semi-Bold 10
-gtk-cursor-theme-name=Bibata-Modern-Classic
-```
-
-```
 nano ~/.Xresources
 ```
 ```
@@ -200,16 +184,4 @@ flatpak -u override --env=XCURSOR_PATH=~/.icons
 flatpak -u override --env=XCURSOR_THEME=Bibata-Modern-Classic
 flatpak -u override --filesystem=/home/$USER/.icons/:ro 
 flatpak -u override --filesystem=xdg-config/gtk-3.0:ro
-```
-### Aliaces reminder
-```
-touch .bash_aliaces
-```
-```
-nano .bashrc
-```
-```
-if [ -f ~/.bash_aliases ]; then
-   . ~/.bash_aliases
-fi
 ```
