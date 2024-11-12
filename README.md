@@ -4,7 +4,7 @@
 # Themes
 ### Processing 
 
-# Debian setup  
+# Personal Debian setup  
 ### Software
 - Essentials
 ```
