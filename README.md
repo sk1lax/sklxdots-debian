@@ -6,7 +6,10 @@
 
 # Personal Debian setup  
 ### Software
-- Essentials
+- Sources
+```
+sudo nano /etc/apt/sources.list
+```
 ```
 deb http://deb.debian.org/debian/ testing main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian/ testing main contrib non-free non-free-firmware
