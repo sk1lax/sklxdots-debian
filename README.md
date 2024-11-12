@@ -232,6 +232,14 @@ GTK_USE_PORTAL=1
 XCURSOR_DISCOVER=1
 ```
 ### Reminders 
+- Fastest mirrors using nala
+```
+sudo nala fetch
+```
+
+
+
+
 ```
 sudo systemctl disable avahi-daemon
 ```
