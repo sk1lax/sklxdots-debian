@@ -16,6 +16,9 @@ sudo apt install xorg pipewire pipewire-pulse pipewire-alsa alsa-utils xorg netw
 sudo apt nala install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp git bc module-assistant build-essential dkms geany file-roller qbittorrent
 # libqt5x11extras5 libqt5x11extras5-dev libqt5svg5 libqt5svg5-dev blueman nitrogen 
 ```
+```
+sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions
+```
 
 - Setting up Flatpak
 ```
@@ -30,9 +33,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 usermod -a -G video,audio,sudo USERNAME
 ```
 ### Steam & Drivers setup 
-- Nvidia Drivers
+- Drivers
 ```
-sudo apt install nvidia-driver 
+sudo apt install nvidia-driver mesa-utils
 ```
 - 32bit Packages 
 ```
@@ -188,4 +191,25 @@ flatpak -u override --env=XCURSOR_PATH=~/.icons
 flatpak -u override --env=XCURSOR_THEME=Bibata-Modern-Classic
 flatpak -u override --filesystem=/home/$USER/.icons/:ro 
 flatpak -u override --filesystem=xdg-config/gtk-3.0:ro
+```
+
+### Network Fix
+```
+sudo nano /etc/network/interfaces
+```
+```
+# This file describes the network interfaces available on>
+# and how to activate them. For more information, see int>
+
+source /etc/network/interfaces.d/*
+
+# -------------- Comment these lines:
+
+# The loopback network interface
+#auto lo
+#iface lo inet loopback
+#allow-hotplug wlo1
+#iface wlo1 inet dhcp
+#       wpa-ssid
+#       wpa-psk
 ```
