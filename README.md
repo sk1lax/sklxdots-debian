@@ -1,6 +1,9 @@
 # Dots setup 
 ### Processing
 
+# Themes
+### Processing 
+
 # Debian setup  
 ### Software
 - Essentials
