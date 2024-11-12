@@ -216,7 +216,17 @@ source /etc/network/interfaces.d/*
 
 ### System Enviroments 
 ```
-a
+sudo nano /etc/environment
+```
+```
+MUTTER_DEBUG_FORCE_KMS_MODE=simple
+QT_STYLE_OVERRIDE=kvantum
+XDG_CURRENT_DESKTOP=GNOME
+QT_QPA_PLATFORMTHEME=qt5ct
+GTK_THEME=Graphite-blue-Dark
+XDG_CURRENT_DEKSTOP=gnome
+GTK_USE_PORTAL=1
+XCURSOR_DISCOVER=1
 ```
 ### Reminders 
 ```
