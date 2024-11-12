@@ -213,3 +213,13 @@ source /etc/network/interfaces.d/*
 #       wpa-ssid
 #       wpa-psk
 ```
+
+### System Enviroments 
+```
+a
+```
+### Reminders 
+```
+sudo systemctl disable avahi-daemon
+```
+
