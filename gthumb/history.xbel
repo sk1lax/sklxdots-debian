@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/skilax/Pictures/Sklxpapers" added="2024-11-19T15:35:26.934794Z" modified="2024-11-19T15:35:26.934800Z" visited="2024-11-19T15:35:26.934795Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2024-11-19T15:35:26.934798Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/skilax/Pictures/%D1%81%D0%BE%D1%85%D1%80%D1%8B" added="2024-11-19T15:35:26.934803Z" modified="2024-11-19T15:35:26.934808Z" visited="2024-11-19T15:35:26.934803Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2024-11-19T15:35:26.934805Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/skilax/Pictures" added="2024-11-19T15:35:26.934811Z" modified="2024-11-19T15:35:26.934814Z" visited="2024-11-19T15:35:26.934811Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2024-11-19T15:35:26.934813Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/skilax/Downloads" added="2024-11-19T15:35:26.934816Z" modified="2024-11-19T15:35:26.934820Z" visited="2024-11-19T15:35:26.934816Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2024-11-19T15:35:26.934818Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
