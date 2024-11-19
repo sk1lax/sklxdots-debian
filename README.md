@@ -176,7 +176,15 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=off"
 ```
 sudo update-grub
 ```
-
+```
+sudo nano /etc/modprobe.d/rtw8821ce.conf
+```
+```
+options rtw88_pci disable_aspm_l1=y disable_aspm_l1ss=y
+options rtw88pci disable_aspm_l1=y disable_aspm_l1ss=y
+options rtw88_core disable_ps_mode=y
+options rtw88core disable_ps_mode=y
+```
 ### Setting up theme fix
 ```
 nano ~/.Xresources
