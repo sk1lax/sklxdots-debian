@@ -63,7 +63,7 @@ sudo apt install steam-installer
 ### BSPWM setup
 - Software
 ```
-sudo apt install bspwm polybar sxhkd alacritty dunst rofi nwg-look picom ranger flameshot nemo qt5-style-plugins qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics xdg-desktop-portal-gtk xdg-desktop-portal imagemagick brightnessctl brightnessctl-dev lightdm pamixer feh lightdm-gtk-greeter-settings redshift redshift-qt5-gtk-platformtheme qt6-gtk-platformtheme qt6ct nemo-fileroller
+sudo apt install bspwm polybar sxhkd alacritty dunst rofi nwg-look picom ranger flameshot nemo qt5-style-plugins qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics xdg-desktop-portal-gtk xdg-desktop-portal imagemagick brightnessctl brightnessctl-dev lightdm pamixer feh lightdm-gtk-greeter-settings redshift redshift-qt5-gtk-platformtheme qt6-gtk-platformtheme qt6ct nemo-fileroller blueman-applet copyq
 ```
 ```
 sudo apt install gtk2-engines-murrine gnome-themes-extra libgtk-3-dev libgtk-3-bin libgtk-3-common libgtk-4-dev libgtk-4-bin libgtk-4-common libgtk-4-1 libgtk-4-dev libgtk2.0-bin libgtk2.0-common libgtk2.0-0t64
