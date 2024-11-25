@@ -19,10 +19,10 @@ deb-src http://security.debian.org/debian-security testing-security main non-fre
 ```
 - Installing packages
 ```
-sudo apt install xorg pipewire pipewire-pulse pipewire-alsa alsa-utils xorg network-manager pipewire-jack
+sudo apt install xorg pipewire pipewire-pulse pipewire-alsa alsa-utils xorg network-manager pipewire-jack libspa-0.2-bluetooth bluez bluez-tools vlc gthumb
 ```
 ```
-sudo apt nala install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp git bc module-assistant build-essential dkms geany file-roller qbittorrent
+sudo apt nala install nvtop btop intel-microcode alacritty simplescreenrecorder pavucontrol ntp git bc module-assistant build-essential dkms geany file-roller qbittorrent blueman
 # libqt5x11extras5 libqt5x11extras5-dev libqt5svg5 libqt5svg5-dev blueman nitrogen 
 ```
 ```
@@ -66,7 +66,7 @@ sudo apt install steam-installer
 sudo apt install bspwm polybar sxhkd alacritty dunst rofi nwg-look picom ranger flameshot nemo qt5-style-plugins qt5ct qt5-style-kvantum qt5-style-kvantum-themes xserver-xorg-input-synaptics xdg-desktop-portal-gtk xdg-desktop-portal imagemagick brightnessctl brightnessctl-dev lightdm pamixer feh lightdm-gtk-greeter-settings redshift redshift-qt5-gtk-platformtheme qt6-gtk-platformtheme qt6ct nemo-fileroller blueman-applet copyq
 ```
 ```
-sudo apt install gtk2-engines-murrine gnome-themes-extra libgtk-3-dev libgtk-3-bin libgtk-3-common libgtk-4-dev libgtk-4-bin libgtk-4-common libgtk-4-1 libgtk-4-dev libgtk2.0-bin libgtk2.0-common libgtk2.0-0t64
+sudo apt install gtk2-engines-murrine gnome-themes-extra libgtk-3-dev libgtk-3-bin libgtk-3-common libgtk-4-dev libgtk-4-bin libgtk-4-common libgtk-4-1 libgtk-4-dev libgtk2.0-bin libgtk2.0-common libgtk2.0-0t64 gnome-themes-extra
 ```
 - Layout setup
 ```
